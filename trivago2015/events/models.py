@@ -9,3 +9,4 @@ class Event(models.Model):
     start = models.DateTimeField(default=None, null=True)
     end = models.DateTimeField(default=None, null=True)
     categories = models.CharField(max_length=500, default=None, null=True)
+    image = models.ImageField(upload_to="image", default=None, null=True)
