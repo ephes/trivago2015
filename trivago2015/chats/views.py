@@ -37,7 +37,11 @@ def post_message(request, event_id):
             status=404
         )
 
-    data = json.loads(request.body.decode())
+    data = {}
+    try:
+        data = json.loads(request.body.decode())
+    except ValueError:
+        pass
     if not data.get("text", None):
         return JsonResponse(
             {"error": "Please provide text"}
