@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import get_user_model
 from django.core.urlresolvers import reverse
+from django.views.decorators.csrf import csrf_exempt
 
 from django.views.generic import FormView
 from django.views.generic import CreateView
@@ -39,6 +40,7 @@ class EventCreateView(CreateView):
         event.save()
         return HttpResponseRedirect(self.get_success_url())
 
+    @csrf_exempt
     def post(self, request, *args, **kwargs):
         logger.info("event create post: {}".format(request.POST))
         response = super(EventCreateView, self).post(request, *args, **kwargs)

@@ -63,6 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'trivago2015.users.middleware.RandomUserMiddleware',
+    'trivago2015.users.middleware.DisableCSRF',
 )
 
 # MIGRATIONS CONFIGURATION
