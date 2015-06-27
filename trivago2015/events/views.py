@@ -3,7 +3,10 @@ import logging
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import get_user_model
+from django.core.urlresolvers import reverse
 
 from django.views.generic import FormView
 from django.views.generic import CreateView
@@ -13,6 +16,8 @@ from .models import Event
 from .forms import EventCreationForm
 
 logger = logging.getLogger(__name__)
+
+User = get_user_model()
 
 
 class EventCreateView(CreateView):
@@ -25,14 +30,19 @@ class EventCreateView(CreateView):
     form_invalid_message = "Event create form invalid"
     form_valid_message = "Event successfully created!"
 
+    def get_success_url(self):
+        return reverse('events:create_event')
+
+    def form_valid(self, form):
+        event = form.save(commit=False)
+        event.owner = User.objects.get(pk=self.request.user.pk)
+        event.save()
+        return HttpResponseRedirect(self.get_success_url())
+
     def post(self, request, *args, **kwargs):
         logger.info("event create post: {}".format(request.POST))
         response = super(EventCreateView, self).post(request, *args, **kwargs)
         return response
-
-    def dispatch(self, request, *args, **kwargs):
-        logger.info("dispatch post: {}".format(request.POST))
-        return super(EventCreateView, self).dispatch(request, *args, **kwargs)
 
 
 def fetch_events(request):
