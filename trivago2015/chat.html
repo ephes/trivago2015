@@ -21,24 +21,33 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/static/css/style.css">
 
 	</head>
 	<body>
-
 		    <!-- Start of third page: #popup -->
-		    <div data-role="page" id="browse">
-
+		    <div data-role="page" id="chat">
 		    	<div data-role="header" data-theme="b">
 		        <a href="#welcome" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
 		    		<h1>Chat</h1>
 		    	</div><!-- /header -->
-
-						<div id="chat-input">
-						<input type="text" placeholder="Type some lovely words..."/>
-						<input type="submit" />
+					<div id="chat-content">
+						<div class="your-blob">
+						Hello Moon!
 						</div>
 
+						<div class="your-blob">
+						Hello Mars!
+						</div>
+						<div class="my-blob">
+						Hello World!
+						</div>
+					</div>
+					<div id="chat-input">
+						<input type="text" id="chat-input-form" placeholder="Type some lovely words..."/>
+						<button id="chat-submit">Go!</button>
+					</div>
 		    </div><!-- /page popup -->
+				<script src="/static/js/script.js"></script>
 	</body>
 </html>

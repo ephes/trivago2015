@@ -17,3 +17,9 @@ $(".back").click(function(){
   var newPageId = '#people-'+newOrder;
   $.mobile.changePage($(newPageId), {transition:"slide"});
 });
+$("#chat-submit").click(function(){
+  var textValue = $("#chat-input-form").val();
+  var bubbleMarkup = "<div class='my-blob'>"+textValue+"</div>";
+  $("#chat-content").append(bubbleMarkup);
+  $("#chat-input-form").val("");
+});
