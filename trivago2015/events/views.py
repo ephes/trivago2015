@@ -4,10 +4,16 @@ import logging
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from django.views.generic import TemplateView
+
 from .models import Event
 
 
 logger = logging.getLogger(__name__)
+
+
+class EventCreateView(TemplateView):
+    template_name = "events/create.html"
 
 
 def fetch_events(request):
