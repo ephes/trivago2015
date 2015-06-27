@@ -1,115 +1,246 @@
 {
 	"events": [
-		
-		  {
-				"title": "Visit the Grand Palace",
-				"category": [
-					"Culture Events", 
-					"Sightseeing"
-				],
-				"location":[
-					"Bangkok",
-					"Grand Palace"
-				],
-				"start": "14:00",
-				"ende": "16:00",
-				"description": "After lunch we want to see the bangkok grand palace. We are 6 people already, but if we get 4 more we get the group discount",
-				"image": "visit_the_grand_palace.jpg"
-			},
-		    {
-				"title": "Boatride on Chao Phraya river",
-				"category": [
-					"Food", 
-					"Drink", 
-					"Party", 
-					"Culture Events", 
-					"Sightseeing", 
-					"Concerts"
-				],
-				"location":[
-					"Bangkok",
-					"Pak Kret Pier"
-				],
-				"start": "28.06.2015 17:00",
-				"ende": "28.06.2015 18:30",
-				"description": "I want to make a boat tour on the river, but it's really expansive to go alone! Maybe we go get some dinner together afterwards?",
-				"image": "boatride_on_chao_phraya_river.jpg"
-			},
-			{
-				"title": "Bike sightseeing tour",
-				"category": [ 
-					"Culture Events", 
-					"Sightseeing"
-				],
-				"location":[
-					"Bangkok",
-					"Chatuchak-Market"
-				],
-				"start": "10:00",
-				"ende": "17:00",
-				"description": "We want to rent bikes and check out a few sights that are outside the city. Meetup is Chatuchak Market. Bring something to drink for the day",
-				"image": "bike_sightseeing_tour.jpg"
-			},
-			{
-				"title": "Eating Pho Noodle Soup in Ru Pho Bar",
-				"category": [
-					"Food"
-				],
-				"location":[
-					"Bangkok",
-					"Ru Pho Bar, 27E Tran Nhat Duat"
-				],
-				"start": "18:00",
-				"ende": "",
-				"description": "I heard they have the best Pho in the world, who wants to try it out?",
-				"image": "eating_pho_noodle_soup_in_ru_pho_bar.jpg"
-			},
-				{
-				"title": "Visit the food market",
-				"category": [
-					"Food", 
-					"       Drink", 
-					"Sightseeing"
-				],
-				"location": [
-					"Bangkok",
-					"Khlong Toey Market"
-				],
-				"start": "12:30",
-				"ende": "14:30",
-				"description": "We want to try out some weird local foods, yummy!!!",
-				"image": "visit_the_food_market.jpg"
-			},
-			{
-				"title": "Wat Mahatat",
-				"category": [
-					"Sightseeing"
-				],
-				"location":[
-					"Bangkok",
-					"Wat Mahat"
-				],
-				"start": "14:00",
-				"ende": "",
-				"description": "I want to see the Wat Mahatat, one of the most beautiful buddhist temples in Bangkok. Who's with me?",
-				"image": "wat_mahatat.jpg"
-			},
-			{
-				"title": "Trivago Hackathon 2015",
-				"category": [
-					"Party", 
-					"Culture Events"
-				],
-				"location":[
-					"Düsseldorf",
-					"Trivago Building, Bennigsen-Platz 1 "
-				],
-				"start": "27.06.2015 9:00",
-				"ende": "28.06.2015 18:00",
-				"description": "Have fun, meet peoople, get ideas",
-				"image": "trivago_hackathon_2015.jpg"
-			}
-		
+	    {
+		    "title": "Visit the Wat Arun",
+			"category": [
+				"Culture", 
+				"Sightseeing"
+			],
+			"location":[
+				"Bangkok",
+				"Wat Arun"
+			],
+			"start": "14:00",
+			"ende": "16:00",
+			"description": "After lunch we want to see the bangkok grand palace. There is a ceremony that day! ",
+			"image": "wat_arun.jpg"
+	    },
+	    {
+			"title": "Boatride on Chao Phraya river",
+			"category": [
+				"Culture"
+				"Sightseeing", 
+			],
+			"location":[
+				"Bangkok",
+				"Pak Kret Pier"
+			],
+			"start": "28.06.2015 17:00",
+			"ende": "28.06.2015 18:30",
+			"description": "I want to make a boat tour on the river, but it's really expansive to go alone! Maybe we go get some dinner together afterwards?",
+			"image": "boatride_on_chao_phraya_river.jpg"
+		},
+		{
+			"title": "Bike sightseeing tour",
+			"category": [ 
+				"Sightseeing",
+				"Sport",
+				"Exploring"
+			],
+			"location":[
+				"Bangkok",
+				"Chatuchak-Market"
+			],
+			"start": "10:00",
+			"ende": "17:00",
+			"description": "We want to rent bikes and check out a few sights that are outside the city. Meetup is Chatuchak Market. Bring something to drink for the day",
+			"image": "bike_sightseeing_tour.jpg"
+		},
+		{
+			"title": "Eating Pho Noodle Soup in Ru Pho Bar",
+			"category": [
+				"Food"
+			],
+			"location":[
+				"Bangkok",
+				"Ru Pho Bar, 27E Tran Nhat Duat"
+			],
+			"start": "18:00",
+			"ende": "",
+			"description": "I heard they have the best Pho in the world, who wants to try it out?",
+			"image": "eating_pho_noodle_soup_in_ru_pho_bar.jpg"
+		},
+		{
+			"title": "Fruit Shakes",
+			"category": [
+				"Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Khlong Toey Market"
+			],
+			"start": "13:00",
+			"ende": "14:00",
+			"description": "They are famous here and incredibly yummy! :)",
+			"image": "fruit_shakes.jpg"
+		},
+		{
+			"title": "Visit the food market",
+			"category": [
+				"Food", 
+				"Drink", 
+				"Sightseeing"
+			],
+			"location": [
+				"Bangkok",
+				"Khlong Toey Market"
+			],
+			"start": "12:30",
+			"ende": "14:30",
+			"description": "We want to try out some weird local foods, yummy!!!",
+			"image": "visit_the_food_market.jpg"
+		},
+		{
+			"title": "Guards Ceremony at the Grand Palace",
+			"category": [
+				"Sightseeing",
+				"Culture"
+			],
+			"location": [
+				"Bangkok",
+				"Grand Palace"
+			],
+			"start": "11:30",
+			"ende": "12:00",
+			"description": "We're Cathy and Bruce and want to watch the Changing of the Guards at the Grand Palace",
+			"image": "guards_ceremony_at_the_grand_palace.jpg"
+		},
+		{
+			"title": "Eat fried scorpions",
+			"category": [
+				"Food", 
+				"Drink", 
+				"Sightseeing"
+			],
+			"location": [
+				"Bangkok",
+				"Khlong Toey Market"
+			],
+			"start": "18:00",
+			"ende": "",
+			"description": "We are three awesome people from the netherlands. We wanna try out some street food before going partying",
+			"image": "eat_fried_scorpions.jpg"
+		},
+		{
+			"title": "Wat Mahatat",
+			"category": [
+				"Sightseeing"
+			],
+			"location":[
+				"Bangkok",
+				"Wat Mahat"
+			],
+			"start": "14:00",
+			"ende": "",
+			"description": "I want to see the Wat Mahatat, one of the most beautiful buddhist temples in Bangkok. Who's with me?",
+			"image": "wat_mahatat.jpg"
+		},
+		{
+			"title": "Temple of Emerald Buddha",
+			"category": [
+				"Sightseeing"
+			],
+			"location":[
+				"Bangkok",
+				"Wat Phra Kaew"
+			],
+			"start": "15:00",
+			"ende": "",
+			"description": "A must see! If you haven't been there yet, join us!!!",
+			"image": "temple_of_emerald_buddha.jpg"
+		},
+		{
+			"title": "Khao San Road",
+			"category": [
+			    "Food",
+			    "Drink",
+				"Sightseeing"
+			],
+			"location":[
+				"Bangkok",
+				"Khao San Road"
+			],
+			"start": "20:00",
+			"ende": "",
+			"description": "Khao San Road is supposed to be really cool at night. We are four crazy dudes from Denmark, maybe you want to hang with us, go to some bars",
+			"image": "khao_san_road.jpg"
+		},
+		{
+			"title": "Clubbing Route 66",
+			"category": [
+			    "Party",
+			    "Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Route 66"
+			],
+			"start": "23:00",
+			"ende": "",
+			"description": "We are 2 nice guys from Germany lookin' for some nice girls to go out tonight",
+			"image": "clubbing_route_66.jpg"
+		},
+		{
+			"title": "Wat Arun at night",
+			"category": [
+				"Sightseeing"
+			],
+			"location":[
+				"Bangkok",
+				"Wat Arun"
+			],
+			"start": "20:00",
+			"ende": "",
+			"description": "Its really beatiful at night! Join us for a few beers at the river in front of Wat Arun!",
+			"image": "wat_arun_at_night.jpg"
+		},
+		{
+			"title": "Glow Nightclub",
+			"category": [
+				"Drink",
+				"Party",
+				"Dance"
+			],
+			"location":[
+				"Bangkok",
+				"Glow"
+			],
+			"start": "20:00",
+			"ende": "",
+			"description": "We were there yesterday and it was awesome, maybe with a few more people ist going to be even more awesome!",
+			"image": "glow_nightclub.jpg"
+		},
+		{
+			"title": "MachineHead live",
+			"category": [
+				"Drink",
+				"Party",
+				"Concerts"
+			],
+			"location":[
+				"Bangkok",
+				"Centerpoint Studio"
+			],
+			"start": "20:00",
+			"ende": "",
+			"description": "I'm coming over to Bangkok to watch MachineHead. Who's with me.",
+			"image": "machinehead_live.jpg"
+		},
+		{
+			"title": "Trivago Hackathon 2015",
+			"category": [
+				"Party", 
+				"Culture"
+			],
+			"location":[
+				"Düsseldorf",
+				"Trivago Building, Bennigsen-Platz 1 "
+			],
+			"start": "27.06.2015 9:00",
+			"ende": "28.06.2015 18:00",
+			"description": "Have fun, meet peoople, get ideas",
+			"image": "trivago_hackathon_2015.jpg"
+		}		
 	]
 }
 		
