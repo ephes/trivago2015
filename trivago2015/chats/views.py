@@ -1,3 +1,5 @@
+import json
+
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
@@ -35,8 +37,8 @@ def post_message(request, event_id):
             status=404
         )
 
-    print(request.method, request.POST)
-    if not request.POST.get('text', None):
+    data = json.loads(request.body.decode())
+    if not data.get("text", None):
         return JsonResponse(
             {"error": "Please provide text"}
         )
@@ -44,7 +46,7 @@ def post_message(request, event_id):
     msg = Message()
     msg.event = event
     msg.author = request.user
-    msg.text = request.POST.get('text', None)
+    msg.text = data.get('text', None)
     msg.save()
 
     return JsonResponse({
