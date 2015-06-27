@@ -21,7 +21,7 @@
 			"category": [
 				"Culture",
 				"Sightseeing"
-            ],
+			],
 			"location":[
 				"Bangkok",
 				"Pak Kret Pier"
@@ -84,7 +84,7 @@
 			"category": [
 				"Food", 
 				"Drink", 
-				"Sightseeing"
+				"Exploring"
 			],
 			"location": [
 				"Bangkok",
@@ -115,9 +115,7 @@
 		{
 			"title": "Eat fried scorpions",
 			"category": [
-				"Food", 
-				"Drink", 
-				"Sightseeing"
+				"Food"
 			],
 			"location": [
 				"Bangkok",
@@ -164,7 +162,8 @@
 			"category": [
 			    "Food",
 			    "Drink",
-				"Sightseeing"
+				"Sightseeing",
+				"Exploring"
 			],
 			"location":[
 				"Bangkok",
@@ -227,8 +226,6 @@
 		{
 			"title": "MachineHead live",
 			"category": [
-				"Drink",
-				"Party",
 				"Concerts"
 			],
 			"location":[
@@ -242,6 +239,67 @@
 			"image": "machinehead_live.jpg"
 		},
 		{
+			"title": "Drink stand",
+			"category": [
+				"Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Khao San Road"
+			],
+			"username": "goldenpanda599",
+			"start": "28.07.2015 20:00",
+			"ende": "",
+			"description": "We saw this cute stand today and want to go there tonight! They got really freshly made juices there",
+			"image": "drink_stand.jpg"
+		},
+		{
+			"title": "A night in Zuma",
+			"category": [
+				"Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Rajadamri Road"
+			],
+			"username": "crazypeacock983",
+			"start": "28.07.2015 21:00",
+			"ende": "",
+			"description": "A friend told me I had to visit this bar while I'm here, but I don't want to go alone. Maybe some nice people want to join?",
+			"image": "a_night_in_zuma.jpg"
+		},
+		{
+			"title": "Chaos in Club Khaosan",
+			"category": [
+				"Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Club Khaosan"
+			],
+			"username": "beautifulostrich127",
+			"start": "28.07.2015 22:00",
+			"ende": "",
+			"description": "We are two girls from Austria looking for some handsome guys (and girls) to dance!",
+			"image": "chaos_in_club_khaosan.jpg"
+		},
+		{
+			"title": "Hike in Erawan Nationalpark",
+			"category": [
+				"Sport",
+				"Exploring"
+			],
+			"location":[
+				"Bangkok",
+				"Erawan Nationalpark"
+			],
+			"username": "brownwolf383",
+			"start": "28.07.2015 22:00",
+			"ende": "",
+			"description": "Me and my Boyfriend want to go Hiking in the near Erawan Nationalpark. The route is about 7km (4 miles) long. This is a very beautiful Park",
+			"image": "hike_in_erawan_nationalpark.jpg"
+		},
+		{
 			"title": "Trivago Hackathon 2015",
 			"category": [
 				"Party", 
@@ -251,7 +309,7 @@
 				"Düsseldorf",
 				"Trivago Building, Bennigsen-Platz 1 "
 			],
-			"username": "foobar",
+			"username": "heavyfish201",
 			"start": "27.06.2015 9:00",
 			"ende": "28.06.2015 18:00",
 			"description": "Have fun, meet peoople, get ideas",
