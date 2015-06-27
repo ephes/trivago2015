@@ -3,10 +3,10 @@
 PYTHON        = python
 
 help:
-@echo "Please use \`make <target>' where <target> is one of"
-    @echo "  deploy_site                 deploy complete production environment"
-    @echo "  backup_vagrantbox_dev       fetch dbdump from devbox"
-    @echo "  restore_to_production       apply dbdump to production system"
+	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  deploy_site                 deploy complete production environment"
+	@echo "  backup_vagrantbox_dev       fetch dbdump from devbox"
+	@echo "  restore_to_production       apply dbdump to production system"
 
 .PHONY: docs
 
