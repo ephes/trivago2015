@@ -44,6 +44,8 @@ THIRD_PARTY_APPS = (
 # Apps specific for this project go here.
 LOCAL_APPS = (
     'trivago2015.users',  # custom users app
+    'trivago2015.chats',  # custom chats app
+    'trivago2015.events',  # custom events app
     # Your stuff: custom apps go here
 )
 
