@@ -60,7 +60,7 @@ def fetch_events(request):
             'title': event.title,
             'description': event.description,
             'image': image_url,
-            'categories': event.categories.split(','),
+            'categories': event.categories.split(',') if event.categories else [],
         }
 
     logger.info("request body: {}".format(request.body))
@@ -71,7 +71,7 @@ def fetch_events(request):
         result = [event_to_dict(event) for event in Event.objects.all()]
         json_response = json.dumps(result)
         return HttpResponse(json_response, content_type="application/json")
-        
+
     categories = set(body.get('preferences', []))
     logger.info('body: {}'.format(body))
     logger.info('categories: {}'.format(categories))
