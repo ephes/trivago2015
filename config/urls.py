@@ -20,6 +20,9 @@ urlpatterns = [
 
     # Your stuff: custom urls includes go here
 
+    url(r'^events/', include("trivago2015.events.urls", namespace="events")),
+    url(r'^chats/', include("trivago2015.chats.urls", namespace="chats")),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
