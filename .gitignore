@@ -54,3 +54,8 @@ node_modules/
 
 # ansible vault passphrase file
 .vault_pass.txt
+
+
+logfile
+
+trivago2015/media
