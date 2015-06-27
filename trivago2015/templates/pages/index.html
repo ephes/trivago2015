@@ -30,6 +30,7 @@
         <p><a href="#page-create" data-transition="slide" class="ui-btn ui-shadow ui-corner-all">Create</a></p>
         <!--	<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>-->
         <p><a href="#page-browse" data-transition="slide" class="ui-btn ui-shadow ui-corner-all">Browse</a></p>
+        <p><a href="#page-map" data-transition="slide" class="ui-btn ui-shadow ui-corner-all">See a map with activities around you</a></p>
       </div><!-- /content -->
     </div>
   </div><!-- /page one -->
@@ -40,7 +41,7 @@
   <!-- Start of second page: #two -->
   <div data-role="page" id="page-create" data-theme="a">
     <div data-role="header">
-      <a href="#welcome" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+      <a href="#page-welcome" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>Create</h1>
     </div><!-- /header -->
 
@@ -55,7 +56,7 @@
   <div data-role="page" id="page-browse">
 
     <div data-role="header" data-theme="b">
-      <a href="#welcome" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+      <a href="#page-welcome" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>Browse</h1>
     </div><!-- /header -->
 
@@ -105,7 +106,7 @@
         </p>
         <p class="category-title">Categories:</p>
         <ul class="categories"><li>
-          <embed class="icon" type="image/svg+xml" src="/static/images/icons/drink.svg" /></li></ul>
+          <embed class="icon" type="image/svg+xml" src="/static/images/icons/drink.png" /></li></ul>
         </div>
       </div>
       <!-- /content -->
@@ -130,15 +131,90 @@
         <p class="category-title">Categories:</p>
         <ul class="categories">
           <li>
-            <embed class="icon" type="image/svg+xml" src="/static/images/icons/party.svg" />
+            <embed class="icon" type="image/svg+xml" src="/static/images/icons/party.png" />
           </li>
           <li>
-            <embed class="icon" type="image/svg+xml" src="/static/images/icons/dance.svg" />
+            <embed class="icon" type="image/svg+xml" src="/static/images/icons/dance.png" />
           </li>
         </ul>
       </div>
     </div>
     <!-- /content -->
+  </div>
+
+  <div data-role="page" id="page-map" data-theme="a">
+
+    <div data-role="header">
+      <a href="#page-welcome" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+	  <h1>Proposed activities around you</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content" style="">
+    <!--
+    <div id="logo-map" style="width:20%">
+        <img id="logo-upper" src="/static/images/icons/metoo1.png" />
+        <img id="logo-lower" src="/static/images/icons/metoo2.png" />
+    </div>
+    -->
+    <div class="people-image"><img src="/static/images/party.jpg" /></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+    <center>
+      <div id="google-map" style="width:80%;"></div>
+    </center>
+    <script type="text/javascript">
+    var map;
+    var service;
+    var infowindow;
+
+    function initialize() {
+      var bankok = new google.maps.LatLng(13.736717,100.523186);
+
+      map = new google.maps.Map(document.getElementById('google-map'), {
+          center: bankok,
+          zoom: 15
+        });
+
+      var request = {
+        location: bankok,
+        radius: '500',
+        query: 'bankok grand palace' // https://developers.google.com/places/supported_types
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, callback);
+    }
+
+    function createMarker(place) {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location,
+        icon: {
+          // Star
+          path: 'M 0,-24 6,-7 24,-7 10,4 15,21 0,11 -15,21 -10,4 -24,-7 -6,-7 z',
+          fillColor: '#ffff00',
+          fillOpacity: 1,
+          scale: 2,
+          strokeColor: '#bd8d2c',
+          strokeWeight: 1
+        }
+      });
+    }
+
+    function callback(results, status) {
+    console.log(results)
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          var place = results[i];
+          createMarker(results[i]);
+        }
+      }
+    }
+    initialize();
+    </script>
+
+    </div><!-- /ui-content -->
   </div>
 
   <!-- jQuery -->
@@ -152,4 +228,3 @@
   <!-- Project custom JavaScript -->
   <script src="/static/js/script.js"></script>
 </body>
-</html>
