@@ -4,8 +4,6 @@ import logging
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .forms import EventsForm
-
 
 logger = logging.getLogger(__name__)
 
