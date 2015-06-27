@@ -2,24 +2,21 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-from django.conf import settings
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.CreateModel(
             name='Event',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('id', models.AutoField(primary_key=True, verbose_name='ID', auto_created=True, serialize=False)),
                 ('description', models.CharField(max_length=500, null=True, default=None)),
-                ('start', models.DateTimeField()),
-                ('end', models.DateTimeField()),
-                ('owner', models.ForeignKey(related_name='owner', to=settings.AUTH_USER_MODEL)),
+                ('start', models.DateTimeField(null=True, default=None)),
+                ('end', models.DateTimeField(null=True, default=None)),
             ],
         ),
     ]
