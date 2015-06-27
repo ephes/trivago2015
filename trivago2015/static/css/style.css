@@ -6,7 +6,7 @@ ul, li{
 }
 
   #welcome {
-			background: url(/static/images/alone.jpg) no-repeat center center fixed;
+			background: url(../images/Titel.jpg) no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -83,6 +83,36 @@ ul, li{
 .options-icon{
   width: 35px;
   margin-right: 4px;
+}
+#chat-input{
+  padding: 0 10px 0 10px;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}
+#logo-container{
+  width: 24%;
+  max-width: 120px;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+}
+#logo-upper{
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  top:0;
+  left:0;
+}
+#logo-lower{
+  z-index: 9;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0.75;
 }
 /*
 .ui-icon-back{
