@@ -19,9 +19,9 @@
 	    {
 			"title": "Boatride on Chao Phraya river",
 			"category": [
-				"Culture"
-				"Sightseeing", 
-			],
+				"Culture",
+				"Sightseeing"
+            ],
 			"location":[
 				"Bangkok",
 				"Pak Kret Pier"
@@ -251,7 +251,7 @@
 				"Düsseldorf",
 				"Trivago Building, Bennigsen-Platz 1 "
 			],
-			"username": "
+			"username": "foobar",
 			"start": "27.06.2015 9:00",
 			"ende": "28.06.2015 18:00",
 			"description": "Have fun, meet peoople, get ideas",
@@ -259,6 +259,3 @@
 		}		
 	]
 }
-		
-
-	
