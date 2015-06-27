@@ -22,7 +22,7 @@ virtualenv_dir: "{{ user_dir }}/.virtualenvs/{{ project_name }}"
 static_dir: "{{ django_dir }}/assets"
 
 
-server_name: waaaasssuuuuppp.com
+server_name: j212975.servers.jiffybox.net
 
 
 postgres_dumps_dir: /tmp/pgdumps
