@@ -3,17 +3,36 @@ import logging
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
+from django.views.generic import FormView
+from django.views.generic import CreateView
 from django.views.generic import TemplateView
 
 from .models import Event
-
+from .forms import EventCreationForm
 
 logger = logging.getLogger(__name__)
 
 
-class EventCreateView(TemplateView):
+class EventCreateView(CreateView):
+    """
+    Create event
+    """
+    model = Event
     template_name = "events/create.html"
+    form_class = EventCreationForm
+    form_invalid_message = "Event create form invalid"
+    form_valid_message = "Event successfully created!"
+
+    def post(self, request, *args, **kwargs):
+        logger.info("event create post: {}".format(request.POST))
+        response = super(EventCreateView, self).post(request, *args, **kwargs)
+        return response
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info("dispatch post: {}".format(request.POST))
+        return super(EventCreateView, self).dispatch(request, *args, **kwargs)
 
 
 def fetch_events(request):
@@ -40,9 +59,13 @@ def fetch_events(request):
     return HttpResponse(json_response, content_type="application/json")
 
 
+@csrf_exempt
 def create_event(request):
     """
     Create a new event
     """
+    logger.info("request scheme: {}".format(request.method))
+    logger.info("event create post: {}".format(request.POST))
+    logger.info("event create get: {}".format(request.GET))
     json_response = json.dumps('ok')
     return HttpResponse(json_response, content_type="application/json")
