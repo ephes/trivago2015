@@ -52,10 +52,15 @@ def fetch_events(request):
     Return Events-Resultset in json format.
     """
     def event_to_dict(event):
+        try:
+            image_url = event.image.url
+        except:
+            image_url = ''
         return {
             'title': event.title,
             'description': event.description,
-            'image': event.image.url,
+            'image': image_url,
+            'categories': event.categories.split(','),
         }
 
     logger.info("request body: {}".format(request.body))
