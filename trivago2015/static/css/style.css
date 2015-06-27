@@ -5,20 +5,20 @@ ul, li{
   list-style: none;
 }
 
-  #welcome {
-			background: url(/static/images/Titel.jpg) no-repeat center center fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
-    #browse {
-        background: url(/static/images/travel.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
+#page-welcome {
+	background: url(/static/images/Titel.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#page-browse {
+  background: url(/static/images/travel.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 #container{
   width: 90%;
   position: relative;
