@@ -51,13 +51,25 @@ def fetch_events(request):
     """
     Return Events-Resultset in json format.
     """
+    def event_to_dict(event):
+        return {
+            'title': event.title,
+            'description': event.description,
+        }
+
     logger.info("request body: {}".format(request.body))
-    body = json.loads(str(request.body.decode('utf8')))
+    result = []
+    try:
+        body = json.loads(str(request.body.decode('utf8')))
+    except ValueError:
+        result = [event_to_dict(event) for event in Event.objects.all()]
+        json_response = json.dumps(result)
+        return HttpResponse(json_response, content_type="application/json")
+        
     categories = set(body.get('preferences', []))
     logger.info('body: {}'.format(body))
     logger.info('categories: {}'.format(categories))
     events = Event.objects.all()
-    result = []
     for event in Event.objects.all():
         if event.categories is not None and len(event.categories) > 0:
             e_categories = set(event.categories.split(','))
