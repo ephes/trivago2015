@@ -1,7 +1,7 @@
 {
 	"events": [
-		{
-			"event": {
+		
+		  {
 				"title": "Visit the Grand Palace",
 				"category": [
 					"Culture Events", 
@@ -16,7 +16,7 @@
 				"description": "After lunch we want to see the bangkok grand palace. We are 6 people already, but if we get 4 more we get the group discount",
 				"image": "visit_the_grand_palace.jpg"
 			},
-			"event": {
+		    {
 				"title": "Boatride on Chao Phraya river",
 				"category": [
 					"Food", 
@@ -35,7 +35,7 @@
 				"description": "I want to make a boat tour on the river, but it's really expansive to go alone! Maybe we go get some dinner together afterwards?",
 				"image": "boatride_on_chao_phraya_river.jpg"
 			},
-			"event": {
+			{
 				"title": "Bike sightseeing tour",
 				"category": [ 
 					"Culture Events", 
@@ -48,9 +48,9 @@
 				"start": "10:00",
 				"ende": "17:00",
 				"description": "We want to rent bikes and check out a few sights that are outside the city. Meetup is Chatuchak Market. Bring something to drink for the day",
-				"image": "bikr_sightseeing_tour.jpg"
+				"image": "bike_sightseeing_tour.jpg"
 			},
-			"event": {
+			{
 				"title": "Eating Pho Noodle Soup in Ru Pho Bar",
 				"category": [
 					"Food"
@@ -64,11 +64,11 @@
 				"description": "I heard they have the best Pho in the world, who wants to try it out?",
 				"image": "eating_pho_noodle_soup_in_ru_pho_bar.jpg"
 			},
-				"event": {
+				{
 				"title": "Visit the food market",
 				"category": [
 					"Food", 
-					"Drink", 
+					"       Drink", 
 					"Sightseeing"
 				],
 				"location": [
@@ -80,7 +80,7 @@
 				"description": "We want to try out some weird local foods, yummy!!!",
 				"image": "visit_the_food_market.jpg"
 			},
-			"event": {
+			{
 				"title": "Wat Mahatat",
 				"category": [
 					"Sightseeing"
@@ -94,7 +94,7 @@
 				"description": "I want to see the Wat Mahatat, one of the most beautiful buddhist temples in Bangkok. Who's with me?",
 				"image": "wat_mahatat.jpg"
 			},
-			"event": {
+			{
 				"title": "Trivago Hackathon 2015",
 				"category": [
 					"Party", 
@@ -109,7 +109,7 @@
 				"description": "Have fun, meet peoople, get ideas",
 				"image": "trivago_hackathon_2015.jpg"
 			}
-		}
+		
 	]
 }
 		
