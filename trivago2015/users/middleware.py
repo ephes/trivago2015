@@ -23,3 +23,8 @@ class RandomUserMiddleware(object):
             user = authenticate(username=username, password="travelBuddy")
             login(request, user)
             return HttpResponseRedirect(request.path)
+
+
+class DisableCSRF(object):
+    def process_request(self, request):
+        setattr(request, '_dont_enforce_csrf_checks', True)
