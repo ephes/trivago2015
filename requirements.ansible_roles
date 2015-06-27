@@ -1,0 +1,1 @@
+common,postgres,django_webapp,nginx,source,gunicorn,elasticsearch
