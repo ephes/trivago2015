@@ -55,6 +55,7 @@ def fetch_events(request):
         return {
             'title': event.title,
             'description': event.description,
+            'image': event.image.url,
         }
 
     logger.info("request body: {}".format(request.body))
