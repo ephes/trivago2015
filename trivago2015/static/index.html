@@ -49,6 +49,7 @@
 
     </div><!-- /page two -->
 
+
     <!-- Start of third page: #popup -->
     <div data-role="page" id="browse">
 
@@ -60,26 +61,83 @@
     	<div role="main" class="ui-content">
         <fieldset data-role="controlgroup">
     <input name="checkbox-1a" id="checkbox-1a" checked="" type="checkbox">
-    <label for="checkbox-1a">Food</label>
+    <label for="checkbox-1a"><img class ="options-icon" src="images/icons/food.png"/>Food</label>
     <input name="checkbox-2a" id="checkbox-2a" type="checkbox">
-    <label for="checkbox-2a">Drink</label>
+    <label for="checkbox-2a"><img class ="options-icon" src="images/icons/drink.png"/>Drink</label>
     <input name="checkbox-3a" id="checkbox-3a" type="checkbox">
-    <label for="checkbox-3a">Party</label>
+    <label for="checkbox-3a"><img class ="options-icon" src="images/icons/party.png"/>Party</label>
     <input name="checkbox-4a" id="checkbox-4a" type="checkbox">
-    <label for="checkbox-4a">Sightseeing</label>
+    <label for="checkbox-4a"><img class ="options-icon" src="images/icons/sightseeing.png"/>Sightseeing</label>
     <input name="checkbox-4a" id="checkbox-4a" type="checkbox">
-    <label for="checkbox-4a">Culture Events</label>
+    <label for="checkbox-4a"><img class ="options-icon" src="images/icons/culture.png"/>Culture Events</label>
     <input name="checkbox-4a" id="checkbox-4a" type="checkbox">
-    <label for="checkbox-4a">Concerts</label>
+    <label for="checkbox-4a"><img class ="options-icon" src="images/icons/concert.png"/>Concerts</label>
     <input name="checkbox-4a" id="checkbox-4a" type="checkbox">
-    <label for="checkbox-4a">Dancing</label>
+    <label for="checkbox-4a"><img class ="options-icon" src="images/icons/dance.png"/>Dancing</label>
     <input name="checkbox-4a" id="checkbox-4a" type="checkbox">
-    <label for="checkbox-4a">Sports</label>
+    <label for="checkbox-4a"><img class ="options-icon" src="images/icons/sports.png"/>Sports</label>
     <input name="checkbox-4a" id="checkbox-4a" type="checkbox">
-    <label for="checkbox-4a">Exploring</label>
+    <label for="checkbox-4a"><img class ="options-icon" src="images/icons/exploring.png"/>Exploring</label>
+		<input name="checkbox-4a" id="checkbox-4a" type="checkbox">
 </fieldset>
+<a href="#people-1" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">Find awesome People!</a>
         	</div><!-- /content -->
     </div><!-- /page popup -->
 
+		<div data-role="page" id="people-1" data-theme="a">
+
+			<div data-role="header">
+				<a href="#browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+				<h1>People who want to meet you</h1>
+			</div><!-- /header -->
+
+			<div role="main" class="ui-content" style="padding:0;">
+				<div class="people-image"><img src="images/beer.jpg" />
+				</div>
+				<img class="back"  data-rel="back" data-order="1" src="images/icons/back.png" />
+				<img class="top" data-order="1" src="images/icons/top.png" />
+				<img class="forward" data-order="1" src="images/icons/forward.png" />
+
+			<div class="people-txt">
+				<p>
+			Hi, were looking for a beer buddy to join a tasty beer here in Bangkok!
+			We're from Nederlands but it does not matter where you are coming from.
+		</p>
+		<p class="category-title">Categories:</p>
+		<ul class="categories"><li>
+		<embed class="icon" type="image/svg+xml" src="images/icons/drink.svg" /></li></ul>
+		</div>
+		</div>
+		<!-- /content -->
+
+		</div>
+		<div data-role="page" id="people-2" data-theme="a">
+
+			<div data-role="header">
+				<a href="#browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+				<h1>People who want to meet you</h1>
+			</div><!-- /header -->
+
+			<div role="main" class="ui-content" style="padding:0;">
+				<div class="people-image"><img src="images/party.jpg" />
+				</div>
+				<img class="back" data-rel="back" data-order="2" src="images/icons/back.png" />
+				<img class="top" data-order="2" src="images/icons/top.png" />
+				<img class="forward" data-order="2" src="images/icons/forward.png" />
+
+			<div class="people-txt">
+				<p>
+		We just want to dance with you!
+		</p>
+		<p class="category-title">Categories:</p>
+		<ul class="categories"><li>
+		<embed class="icon" type="image/svg+xml" src="images/icons/party.svg" /></li>
+	<li>
+	<embed class="icon" type="image/svg+xml" src="images/icons/dance.svg" /></li></ul>
+		</div>
+		</div>
+		<!-- /content -->
+		</div>
+<script src="js/script.js"></script>
 	</body>
 </html>
