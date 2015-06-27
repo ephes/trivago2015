@@ -13,6 +13,6 @@ class User(AbstractUser):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, related_name='profile')
 
     image = models.ImageField(upload_to="image", default=None, null=True)
