@@ -32,3 +32,11 @@ def fetch_events(request):
             })
     json_response = json.dumps(result)
     return HttpResponse(json_response, content_type="application/json")
+
+
+def create_event(request):
+    """
+    Create a new event
+    """
+    json_response = json.dumps('ok')
+    return HttpResponse(json_response, content_type="application/json")
