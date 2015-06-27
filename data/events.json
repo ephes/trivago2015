@@ -10,6 +10,7 @@
 				"Bangkok",
 				"Wat Arun"
 			],
+			"username": "crazyladybug59",
 			"start": "14:00",
 			"ende": "16:00",
 			"description": "After lunch we want to see the bangkok grand palace. There is a ceremony that day! ",
@@ -18,13 +19,14 @@
 	    {
 			"title": "Boatride on Chao Phraya river",
 			"category": [
-				"Culture"
-				"Sightseeing", 
+				"Culture",
+				"Sightseeing"
 			],
 			"location":[
 				"Bangkok",
 				"Pak Kret Pier"
 			],
+			"username": "silvermeercat675",
 			"start": "28.06.2015 17:00",
 			"ende": "28.06.2015 18:30",
 			"description": "I want to make a boat tour on the river, but it's really expansive to go alone! Maybe we go get some dinner together afterwards?",
@@ -41,6 +43,7 @@
 				"Bangkok",
 				"Chatuchak-Market"
 			],
+			"username": "redswan575",
 			"start": "10:00",
 			"ende": "17:00",
 			"description": "We want to rent bikes and check out a few sights that are outside the city. Meetup is Chatuchak Market. Bring something to drink for the day",
@@ -55,6 +58,7 @@
 				"Bangkok",
 				"Ru Pho Bar, 27E Tran Nhat Duat"
 			],
+			"username": "organicswan214",
 			"start": "18:00",
 			"ende": "",
 			"description": "I heard they have the best Pho in the world, who wants to try it out?",
@@ -69,6 +73,7 @@
 				"Bangkok",
 				"Khlong Toey Market"
 			],
+			"username": "greengoose317",
 			"start": "13:00",
 			"ende": "14:00",
 			"description": "They are famous here and incredibly yummy! :)",
@@ -79,12 +84,13 @@
 			"category": [
 				"Food", 
 				"Drink", 
-				"Sightseeing"
+				"Exploring"
 			],
 			"location": [
 				"Bangkok",
 				"Khlong Toey Market"
 			],
+			"username": "heavysnake412",
 			"start": "12:30",
 			"ende": "14:30",
 			"description": "We want to try out some weird local foods, yummy!!!",
@@ -100,6 +106,7 @@
 				"Bangkok",
 				"Grand Palace"
 			],
+			"username": "heavysnake412",
 			"start": "11:30",
 			"ende": "12:00",
 			"description": "We're Cathy and Bruce and want to watch the Changing of the Guards at the Grand Palace",
@@ -108,14 +115,13 @@
 		{
 			"title": "Eat fried scorpions",
 			"category": [
-				"Food", 
-				"Drink", 
-				"Sightseeing"
+				"Food"
 			],
 			"location": [
 				"Bangkok",
 				"Khlong Toey Market"
 			],
+			"username": "heavybird310",
 			"start": "18:00",
 			"ende": "",
 			"description": "We are three awesome people from the netherlands. We wanna try out some street food before going partying",
@@ -130,6 +136,7 @@
 				"Bangkok",
 				"Wat Mahat"
 			],
+			"username": "brownwolf383",
 			"start": "14:00",
 			"ende": "",
 			"description": "I want to see the Wat Mahatat, one of the most beautiful buddhist temples in Bangkok. Who's with me?",
@@ -144,6 +151,7 @@
 				"Bangkok",
 				"Wat Phra Kaew"
 			],
+			"username": "goldenmeercat766",
 			"start": "15:00",
 			"ende": "",
 			"description": "A must see! If you haven't been there yet, join us!!!",
@@ -154,12 +162,14 @@
 			"category": [
 			    "Food",
 			    "Drink",
-				"Sightseeing"
+				"Sightseeing",
+				"Exploring"
 			],
 			"location":[
 				"Bangkok",
 				"Khao San Road"
 			],
+			"username": "lazybird193",
 			"start": "20:00",
 			"ende": "",
 			"description": "Khao San Road is supposed to be really cool at night. We are four crazy dudes from Denmark, maybe you want to hang with us, go to some bars",
@@ -175,6 +185,7 @@
 				"Bangkok",
 				"Route 66"
 			],
+			"username": "bluedog799",
 			"start": "23:00",
 			"ende": "",
 			"description": "We are 2 nice guys from Germany lookin' for some nice girls to go out tonight",
@@ -189,6 +200,7 @@
 				"Bangkok",
 				"Wat Arun"
 			],
+			"username": "beautifulkoala673",
 			"start": "20:00",
 			"ende": "",
 			"description": "Its really beatiful at night! Join us for a few beers at the river in front of Wat Arun!",
@@ -205,6 +217,7 @@
 				"Bangkok",
 				"Glow"
 			],
+			"username": "goldenpanda599",
 			"start": "20:00",
 			"ende": "",
 			"description": "We were there yesterday and it was awesome, maybe with a few more people ist going to be even more awesome!",
@@ -213,18 +226,78 @@
 		{
 			"title": "MachineHead live",
 			"category": [
-				"Drink",
-				"Party",
 				"Concerts"
 			],
 			"location":[
 				"Bangkok",
 				"Centerpoint Studio"
 			],
+			"username": "goldenpanda599",
 			"start": "08.07.2015 20:00",
 			"ende": "",
 			"description": "I'm coming over to Bangkok to watch MachineHead. Who's with me.",
 			"image": "machinehead_live.jpg"
+		},
+		{
+			"title": "Drink stand",
+			"category": [
+				"Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Khao San Road"
+			],
+			"username": "goldenpanda599",
+			"start": "28.07.2015 20:00",
+			"ende": "",
+			"description": "We saw this cute stand today and want to go there tonight! They got really freshly made juices there",
+			"image": "drink_stand.jpg"
+		},
+		{
+			"title": "A night in Zuma",
+			"category": [
+				"Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Rajadamri Road"
+			],
+			"username": "crazypeacock983",
+			"start": "28.07.2015 21:00",
+			"ende": "",
+			"description": "A friend told me I had to visit this bar while I'm here, but I don't want to go alone. Maybe some nice people want to join?",
+			"image": "a_night_in_zuma.jpg"
+		},
+		{
+			"title": "Chaos in Club Khaosan",
+			"category": [
+				"Drink"
+			],
+			"location":[
+				"Bangkok",
+				"Club Khaosan"
+			],
+			"username": "beautifulostrich127",
+			"start": "28.07.2015 22:00",
+			"ende": "",
+			"description": "We are two girls from Austria looking for some handsome guys (and girls) to dance!",
+			"image": "chaos_in_club_khaosan.jpg"
+		},
+		{
+			"title": "Hike in Erawan Nationalpark",
+			"category": [
+				"Sport",
+				"Exploring"
+			],
+			"location":[
+				"Bangkok",
+				"Erawan Nationalpark"
+			],
+			"username": "brownwolf383",
+			"start": "28.07.2015 22:00",
+			"ende": "",
+			"description": "Me and my Boyfriend want to go Hiking in the near Erawan Nationalpark. The route is about 7km (4 miles) long. This is a very beautiful Park",
+			"image": "hike_in_erawan_nationalpark.jpg"
 		},
 		{
 			"title": "Trivago Hackathon 2015",
@@ -236,6 +309,7 @@
 				"Düsseldorf",
 				"Trivago Building, Bennigsen-Platz 1 "
 			],
+			"username": "heavyfish201",
 			"start": "27.06.2015 9:00",
 			"ende": "28.06.2015 18:00",
 			"description": "Have fun, meet peoople, get ideas",
@@ -243,6 +317,3 @@
 		}		
 	]
 }
-		
-
-	
