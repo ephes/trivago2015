@@ -1,13 +1,13 @@
 
   #welcome {
-			background: url(../img/alone.jpg) no-repeat center center fixed;
+			background: url(../images/alone.jpg) no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
 		}
     #browse {
-        background: url(../img/travel.jpg) no-repeat center center fixed;
+        background: url(../images/travel.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
