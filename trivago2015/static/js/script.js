@@ -86,7 +86,7 @@ $(".hexagon").click(function(){
   $(this).find(".checked").toggleClass("no-display");
   var hexagonId =   $(this).attr("id");
   var checkboxName = "checkbox-"+hexagonId;
-  alert(hexagonId);
+  //alert(hexagonId);
   var checkBoxe = $("#"+checkboxName);
   checkBoxe.prop("checked", !checkBoxe.prop("checked"));
   var checked = checkBoxe.prop("checked");

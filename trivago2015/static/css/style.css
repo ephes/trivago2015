@@ -183,11 +183,11 @@ height: 50px;
   /*  margin: 0 0 5px 0;*/
 }
 .hexagon{
-  width: 100%;
-  height: 97px;
-  display: block;
-  position: relative;
   cursor: pointer;
+      display: block;
+      height: 121px;
+      position: relative;
+      width: 100%;
 }
 .hexagon img{
   width: 100%;
@@ -202,24 +202,24 @@ height: 50px;
   position: absolute;
   width: 100%;
   margin: 0 auto 0 auto;
+  top: 95px;
 }
 .column{
-magrin: 0 10px 0 0;
-width: 100px;
-display: inline-block;
-height: 100%;
-position: relative;
-clear: both;
+  clear: both;
+     display: inline-block;
+     height: 100%;
+     position: relative;
+     width: 34%;
 }
 #column-1, #column-3{
-  top: 49px;
+  top: 62px;
 }
 #column-1, #column-2{
   margin-right: -24px;
  }
 #find-submit{
   position: absolute;
-  bottom: 25px;
+  bottom: 55px;
   width: 80%;
-  margin: 0 auto 0 auto;
+  margin-right: 0;
 }
