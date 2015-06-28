@@ -26,6 +26,9 @@ class RandomUserMiddleware(object):
             return HttpResponseRedirect(request.path)
 =======
             request.user = user
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
