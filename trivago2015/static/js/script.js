@@ -1,20 +1,36 @@
-$("#chat-submit").click(function(){
+var chat_refresh_timeout = false;
+
+var handle_message_send_response = function(data) {
   var textValue = $("#chat-input-form").val();
-  var bubbleMarkup = "<div class='my-blob'>" + textValue + "</div>";
+  var bubbleMarkup = '<div class="blob my-blob" data-created="' + data.created_at + '">' + textValue + '</div>';
   $("#chat-content").append(bubbleMarkup);
-  $("#chat-input-form").val("");
+  $("#chat-input-form").val('');
+}
+
+$("#chat-submit").click(function() {
+  var eventid = $('#page-chat #input-event-id').val();
+  var textValue = $("#chat-input-form").val();
+  $.ajax('/chats/post/' + eventid + '/', {
+    'method': 'POST',
+    'data': JSON.stringify({
+      'text': textValue
+    }),
+    'processData': false,
+    'success': handle_message_send_response
+  });
 });
 
 var handle_events_data = function(data) {
   var response = data;
   for(var i= 0; i < response.length; i++) {
-    var title = response[i].title;
+    var ev = response[i];
+    var title = ev.title;
     var categories = [];
-    if (response[i].categories.length) {
-      var categories = response[i].categories;
+    if (ev.categories.length) {
+      var categories = ev.categories;
     }
-    var description = response[i].description;
-    var image = response[i].image;
+    var description = ev.description;
+    var image = ev.image;
 
     var categories_str = '';
     for(var j= 0; j < categories.length; j++) {
@@ -35,7 +51,7 @@ var handle_events_data = function(data) {
       '</a>'
     }
 
-    var eventMarkup = '<div data-role="page" id="page-event-' + i + '" data-theme="a" class="page-events">' +
+    var eventMarkup = '<div data-role="page" id="page-event-' + i + '" data-theme="a" class="page-events" data-event="' + ev.id + '">' +
       '<div data-role="header">' +
         '<a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>' +
         '<h1>' + title + '</h1>' +
@@ -46,7 +62,7 @@ var handle_events_data = function(data) {
         '<div class="people-image">' +
           '<img src="' + image + '" />' +
         '</div>' + previous_str +
-        '<a href="#page-chat">' +
+        '<a href="#page-chat" id="btn-load-chat" data-event="' + ev.id + '">' +
           '<img class="top" src="/static/images/icons/top.png" />' + next_str +
         '</a>' +
         '<div class="people-txt">' +
@@ -56,6 +72,10 @@ var handle_events_data = function(data) {
         '</div>' +
       '</div></div>';
     $("body").append(eventMarkup);
+    $('#page-event-' + i + ' #btn-load-chat').click(function() {
+      $('#page-chat #input-event-id').val($(this).data('event'));
+      $.mobile.changePage($($(this).attr('id')), {transition:"slide"});
+    });
   }
 
   if ($('#page-event-0').length) {
@@ -81,7 +101,31 @@ $("#btn-find-events").click(function() {
   })
 });
 
-$(".hexagon").click(function(){
+var handle_chat_data = function(data) {
+  chats = data.results;
+  for (var i = 0; i < chats.length; i++) {
+    var chat = chats[i];
+    $("#chat-content").append('<div class="blob your-blob" data-created="' + chat.created_at + '">' + chat.text + '</div>');
+  }
+}
+
+
+var check_new_messages = function() {
+  var eventid = $('#page-chat #input-event-id').val();
+  var last = $('#chat-content .blob').last().data('created') || false;
+  $.ajax('/chats/messages/' + eventid + '/?last=' + last, {
+    'method': 'GET',
+    'success': handle_chat_data,
+    'dataType': 'JSON'
+  });
+  chat_refresh_timeout = setTimeout(check_new_messages, 3000);
+}
+
+$('#page-chat').on('pagebeforeshow', function(event) {
+  chat_refresh_timeout = setTimeout(check_new_messages, 1000);
+)};
+
+$(".hexagon").click(function() {
   $(this).find(".unchecked").toggleClass("no-display");
   $(this).find(".checked").toggleClass("no-display");
   var hexagonId =   $(this).attr("id");

@@ -1,4 +1,5 @@
 import json
+import datetime
 
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -16,13 +17,20 @@ def get_messages(request, event_id):
             status=404
         )
 
+    last = request.GET.get('last', None)
+    if last and last != 'false':
+        last = datetime.datetime.strptime(last, '%Y-%m-%dT%H:%M:%S:%f')
+        query = Message.objects.filter(event=event, created_at__gt=last)
+    else:
+        query = Message.objects.filter(event=event)
+
     return JsonResponse({
-        "count": Message.objects.filter(event=event).count(),
+        "count": query.count(),
         "results": [{
             "text": x.text,
             "author": x.author.username,
-            "created_at": x.created_at.isoformat()
-        } for x in Message.objects.filter(event=event)]
+            "created_at": x.created_at.strftime('%Y-%m-%dT%H:%M:%S:%f')
+        } for x in query.all()]
     },
     safe=False)
 
@@ -55,5 +63,5 @@ def post_message(request, event_id):
 
     return JsonResponse({
         "status": "success",
-        "created_at": msg.created_at
+        "created_at": msg.created_at.strftime('%Y-%m-%dT%H:%M:%S:%f')
     })

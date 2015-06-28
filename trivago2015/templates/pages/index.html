@@ -40,49 +40,49 @@
 
 
   <!-- Start of second page: #two -->
-  <div data-role="page" id="page-create" data-theme="a">
+  <div data-role="page" id="page-browse" data-theme="a">
     <div data-role="header">
       <a href="#page-welcome" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
-      <h1>Create a group activity</h1>
+      <h1>Tell us your preferences</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
       <div id="pref-container">
-      			<div id="column-1" class="column">		<div id="drink" class="hexagon">
-      					<img class="unchecked" src="/static/images/icons/drink.png" />
-      					<img class="checked no-display" src="/static/images/icons/drink-a.png" />
-      					</div>
-      					<div id="concert" class="hexagon">
-      						<img class="unchecked" src="/static/images/icons/concert.png" />
-      						<img class="checked no-display" src="/static/images/icons/concert-a.png" />
-      					</div>
-      					<div id="explore" class="hexagon">
-      					<img class="unchecked" src="/static/images/icons/explore.png" />
-      					<img class="checked no-display" src="/static/images/icons/explore-a.png" /></div>
-      				</div>
-      				<div id="column-2" class="column">
-      					<div id="food" class="hexagon">
-      						<img class="unchecked" src="/static/images/icons/food.png" />
-      						<img class="checked no-display" src="/static/images/icons/food-a.png" /></div>
-      					<div id="sightseeing" class="hexagon">
-      						<img class="unchecked" src="/static/images/icons/sightseeing.png" />
-      						<img class="checked no-display" src="/static/images/icons/sightseeing-a.png" /></div>
-      					<div id="sport" class="hexagon">
-      						<img class="unchecked" src="/static/images/icons/sport.png" />
-      						<img class="checked no-display" src="/static/images/icons/sport-a.png" /></div>
-      					</div>
-      					<div id="column-3" class="column">
-      					<div id="party" class="hexagon">
-      						<img class="unchecked" src="/static/images/icons/party.png" />
-      						<img class="checked no-display" src="/static/images/icons/party-a.png" /></div>
-      					<div id="culture" class="hexagon">
-      						<img class="unchecked" src="/static/images/icons/culture.png" />
-      						<img class="checked no-display" src="/static/images/icons/culture-a.png" /></div>
-      					<div id="dance" class="hexagon">
-      						<img class="unchecked" src="/static/images/icons/dance.png" />
-      						<img class="checked no-display" src="/static/images/icons/dance-a.png" /></div>
-      					</div>
-      			</div>
+  			<div id="column-1" class="column">		<div id="drink" class="hexagon">
+					<img class="unchecked" src="/static/images/icons/drink.png" />
+					<img class="checked no-display" src="/static/images/icons/drink-a.png" />
+					</div>
+					<div id="concert" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/concert.png" />
+						<img class="checked no-display" src="/static/images/icons/concert-a.png" />
+					</div>
+					<div id="explore" class="hexagon">
+					<img class="unchecked" src="/static/images/icons/explore.png" />
+					<img class="checked no-display" src="/static/images/icons/explore-a.png" /></div>
+				</div>
+				<div id="column-2" class="column">
+					<div id="food" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/food.png" />
+						<img class="checked no-display" src="/static/images/icons/food-a.png" /></div>
+					<div id="sightseeing" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/sightseeing.png" />
+						<img class="checked no-display" src="/static/images/icons/sightseeing-a.png" /></div>
+					<div id="sport" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/sport.png" />
+						<img class="checked no-display" src="/static/images/icons/sport-a.png" /></div>
+					</div>
+					<div id="column-3" class="column">
+					<div id="party" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/party.png" />
+						<img class="checked no-display" src="/static/images/icons/party-a.png" /></div>
+					<div id="culture" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/culture.png" />
+						<img class="checked no-display" src="/static/images/icons/culture-a.png" /></div>
+					<div id="dance" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/dance.png" />
+						<img class="checked no-display" src="/static/images/icons/dance-a.png" /></div>
+					</div>
+  			</div>
       <form id="checkboxes">
         <input name="textinput-4" id="textinput-4" placeholder="Title" value="" type="text">
         <fieldset data-role="controlgroup">
@@ -108,19 +108,8 @@
         <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-4">Submit</button>
       </form>
     </div><!-- /ui-content -->
-  </div><!-- /page two -->
 
-
-
-
-  <!-- Start of third page: #popup -->
-  <div data-role="page" id="page-browse">
-    <div data-role="header" data-theme="b">
-      <a href="#page-welcome" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
-      <h1>Browse</h1>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content" id="preference-list">
+    <div style="display:none;" id="preference-list">
       <fieldset data-role="controlgroup">
         <input id="checkbox-food" type="checkbox">
         <label for="checkbox-food"><img class ="options-icon" src="/static/images/icons/food.png"/>Food</label>
@@ -143,64 +132,7 @@
       </fieldset>
       <a href="#page-event-0" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right" id="btn-find-events">Find awesome People!</a>
     </div><!-- /content -->
-  </div><!-- /page popup -->
-
-  <!--div data-role="page" id="people-1" data-theme="a">
-
-    <div data-role="header">
-      <a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
-      <h1>People who want to meet you</h1>
-    </div><!-- /header -->
-
-    <!--div role="main" class="ui-content" style="padding:0;">
-      <div class="people-image"><img src="/static/images/beer.jpg" />
-      </div>
-      <img class="back"  data-rel="back" data-order="1" src="/static/images/icons/back.png" />
-      <img class="top" data-order="1" src="/static/images/icons/top.png" />
-      <img class="forward" data-order="1" src="/static/images/icons/forward.png" />
-
-      <div class="people-txt">
-        <p>
-          Hi, were looking for a beer buddy to join a tasty beer here in Bangkok!
-          We're from Nederlands but it does not matter where you are coming from.
-        </p>
-        <p class="category-title">Categories:</p>
-        <ul class="categories"><li>
-          <embed class="icon" type="image/svg+xml" src="/static/images/icons/drink.png" /></li></ul>
-        </div>
-      </div>
-      <!-- /content -->
-
-  <!--/div-->
-
-  <!--div data-role="page" id="people-2" data-theme="a">
-    <div data-role="header">
-      <a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
-      <h1>People who want to meet you</h1>
-    </div><!-- /header -->
-
-    <!--div role="main" class="ui-content" style="padding:0;">
-      <div class="people-image"><img src="/static/images/party.jpg" />
-      </div>
-      <img class="back" data-rel="back" data-order="2" src="/static/images/icons/back.png" />
-      <img class="top" data-order="2" src="/static/images/icons/top.png" />
-      <img class="forward" data-order="2" src="/static/images/icons/forward.png" />
-
-      <div class="people-txt">
-        <p>We just want to dance with you!</p>
-        <p class="category-title">Categories:</p>
-        <ul class="categories">
-          <li>
-            <embed class="icon" type="image/svg+xml" src="/static/images/icons/party.png" />
-          </li>
-          <li>
-            <embed class="icon" type="image/svg+xml" src="/static/images/icons/dance.png" />
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- /content -->
-  <!--/div-->
+  </div><!-- /page -->
 
   <div data-role="page" id="page-map" data-theme="a">
 
@@ -220,8 +152,13 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
     <center>
-      <div id="google-map" style="width:80%;min-height:400px;max-height:90%"></div>
+      <div id="google-map" style="width:95%;min-height:600px;max-height:90%">
+          <a href="#page-browse">
+            <img style="width:100%" src="/static/images/bankok-map.png" />
+          </a>
+      </div>
     </center>
+    <!--<script type="text/javascript" src="static/js/events-map.js"></script>-->
     <!--script type="text/javascript">
     var map;
     var service;
@@ -282,22 +219,14 @@
 
   <!-- Chat page -->
   <div data-role="page" id="page-chat">
+    <input id="input-event-id" type="hidden">
     <div data-role="header" data-theme="b">
       <a href="#page-browse" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>Chat</h1>
     </div><!-- /header -->
-    <div id="chat-content">
-      <div class="your-blob">
-        Hello Moon!
-      </div>
 
-      <div class="your-blob">
-        Hello Mars!
-      </div>
-      <div class="my-blob">
-        Hello World!
-      </div>
-    </div>
+    <div id="chat-content"></div>
+
     <div id="chat-input">
       <input type="text" id="chat-input-form" placeholder="Type some lovely words..."/>
       <button id="chat-submit">Go!</button>
