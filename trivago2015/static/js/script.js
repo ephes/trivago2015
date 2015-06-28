@@ -8,13 +8,14 @@ $("#chat-submit").click(function(){
 var handle_events_data = function(data) {
   var response = data;
   for(var i= 0; i < response.length; i++) {
-    var title = response[i].title;
+    var ev = response[i];
+    var title = ev.title;
     var categories = [];
-    if (response[i].categories.length) {
-      var categories = response[i].categories;
+    if (ev.categories.length) {
+      var categories = ev.categories;
     }
-    var description = response[i].description;
-    var image = response[i].image;
+    var description = ev.description;
+    var image = ev.image;
 
     var categories_str = '';
     for(var j= 0; j < categories.length; j++) {
@@ -35,7 +36,7 @@ var handle_events_data = function(data) {
       '</a>'
     }
 
-    var eventMarkup = '<div data-role="page" id="page-event-' + i + '" data-theme="a" class="page-events">' +
+    var eventMarkup = '<div data-role="page" id="page-event-' + i + '" data-theme="a" class="page-events" data-event="' + ev.id + '">' +
       '<div data-role="header">' +
         '<a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>' +
         '<h1>' + title + '</h1>' +
@@ -46,7 +47,7 @@ var handle_events_data = function(data) {
         '<div class="people-image">' +
           '<img src="' + image + '" />' +
         '</div>' + previous_str +
-        '<a href="#page-chat">' +
+        '<a href="#page-chat" id="btn-load-chat" data-event="' + ev.id + '">' +
           '<img class="top" src="/static/images/icons/top.png" />' + next_str +
         '</a>' +
         '<div class="people-txt">' +
@@ -56,6 +57,10 @@ var handle_events_data = function(data) {
         '</div>' +
       '</div></div>';
     $("body").append(eventMarkup);
+    $('#page-event-' + i + ' #btn-load-chat').click(function() {
+      $('#page-chat #input-event-id').val($(this).data('event'));
+      $.mobile.changePage($($(this).attr('id')), {transition:"slide"});
+    });
   }
 
   if ($('#page-event-0').length) {
