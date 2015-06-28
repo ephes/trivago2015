@@ -27,7 +27,6 @@ $("#chat-submit").click(function(){
 });
 
 
-
 $("#btn-find-events").click(function() {
   var prefs = [];
   $("#preference-list").find("input:checked").each(function() {
