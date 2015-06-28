@@ -57,6 +57,7 @@ def fetch_events(request):
         except:
             image_url = ''
         return {
+            'id': event.pk,
             'title': event.title,
             'description': event.description,
             'image': image_url,
