@@ -28,7 +28,7 @@ ul, li{
   background-size: cover;
 }
 #page-chat {
-  background: url(/static/images/bg-chat1.jpg) no-repeat center center fixed;
+  background: url(/static/images/BG-chat1.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
