@@ -59,8 +59,7 @@ var handle_events_data = function(data) {
       '<!-- /header -->' +
 
       '<div role="main" class="ui-content" style="padding:0;">' +
-        '<div class="people-image">' +
-          '<img src="' + image + '" />' +
+        '<div class="people-image" style="background:url(' + image + ') no-repeat center center fixed;-webkit-background-size:cover;background-size:cover;">' +
         '</div>' + previous_str +
         '<a href="#page-chat" id="btn-load-chat" data-event="' + ev.id + '">' +
           '<img class="top" src="/static/images/icons/top.png" />' + next_str +
