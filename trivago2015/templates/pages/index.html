@@ -23,8 +23,8 @@
   <div data-role="page" id="page-welcome">
     <div role="main" class="ui-content">
       <div id="logo-container">
-        <img id="logo-upper" src="/static/images//icons/metoo1.png" />
-        <img id="logo-lower" src="/static/images//icons/metoo2.png" />
+        <img id="logo-upper" src="/static/images/icons/metoo1.png" />
+        <img id="logo-lower" src="/static/images/icons/metoo2.png" />
       </div>
       <div id="welcome-controls">
         <p><a href="#page-create" data-transition="slide" class="ui-btn ui-shadow ui-corner-all">Create</a></p>
@@ -156,12 +156,11 @@
         <img id="logo-lower" src="/static/images/icons/metoo2.png" />
     </div>
     -->
-    <div class="people-image"><img src="/static/images/party.jpg" /></div>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
     <center>
-      <div id="google-map" style="width:80%;"></div>
+      <div id="google-map" style="width:80%;min-height:400px;max-height:90%"></div>
     </center>
     <script type="text/javascript">
     var map;
@@ -169,11 +168,11 @@
     var infowindow;
 
     function initialize() {
-      var bankok = new google.maps.LatLng(13.736717,100.523186);
+      var bankok = new google.maps.LatLng(14.236717,99.203186);
 
       map = new google.maps.Map(document.getElementById('google-map'), {
           center: bankok,
-          zoom: 15
+          zoom: 9
         });
 
       var request = {
@@ -184,6 +183,10 @@
 
       service = new google.maps.places.PlacesService(map);
       service.textSearch(request, callback);
+
+      var autocomplete = new google.maps.places.Autocomplete(input);
+      autocomplete.bindTo('bounds', map);
+
     }
 
     function createMarker(place) {
@@ -195,7 +198,7 @@
           path: 'M 0,-24 6,-7 24,-7 10,4 15,21 0,11 -15,21 -10,4 -24,-7 -6,-7 z',
           fillColor: '#ffff00',
           fillOpacity: 1,
-          scale: 2,
+          scale: 0.7,
           strokeColor: '#bd8d2c',
           strokeWeight: 1
         }
@@ -203,7 +206,7 @@
     }
 
     function callback(results, status) {
-    console.log(results)
+    console.log(results[0])
       if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
           var place = results[i];
