@@ -80,3 +80,9 @@ $("#btn-find-events").click(function() {
     "success": handle_events_data
   })
 });
+
+$(".hexagon").click(function(){
+  $(this).find(".unchecked").toggleClass("no-display");
+  $(this).find(".checked").toggleClass("no-display");
+   $("#checkbox-drink").prop("checked", !checkBoxes.prop("checked"));
+});
