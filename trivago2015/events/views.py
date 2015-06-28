@@ -5,10 +5,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import get_user_model
 from django.core.urlresolvers import reverse
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -39,6 +42,7 @@ class EventCreateView(CreateView):
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     def get_success_url(self):
         return reverse('events:create_event')
 
@@ -53,13 +57,18 @@ class EventCreateView(CreateView):
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     def post(self, request, *args, **kwargs):
         logger.info("event create post: {}".format(request.POST))
         response = super(EventCreateView, self).post(request, *args, **kwargs)
         return response
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -67,6 +76,9 @@ class EventCreateView(CreateView):
         logger.info("dispatch post: {}".format(request.POST))
         return super(EventCreateView, self).dispatch(request, *args, **kwargs)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
