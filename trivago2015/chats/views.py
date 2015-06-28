@@ -1,12 +1,16 @@
 import json
 import datetime
+import random
 
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import get_user_model
 
 from trivago2015.events.models import Event
 from .models import Message
 
+
+User = get_user_model()
 
 def get_messages(request, event_id):
     try:
@@ -15,6 +19,24 @@ def get_messages(request, event_id):
         return JsonResponse(
             {"error": "Event not found"},
             status=404
+        )
+
+    comments = [
+        'That is great, lets meet!',
+        'When are we meeting? I am excited',
+        'See you soon!',
+        'Great plan, lets do this :)',
+        'Hey it will be nice to do this together!',
+        'Awesome, lets do this!',
+    ]
+
+    users = [x for x in User.objects.all()]
+
+    if Message.objects.filter(event=event).count() < 3:
+        Message.objects.create(
+            event=event,
+            text=random.choice(comments),
+            author=random.choice(users)
         )
 
     last = request.GET.get('last', None)

@@ -123,14 +123,13 @@ var check_new_messages = function() {
 
 $('#page-chat').on('pagebeforeshow', function(event) {
   chat_refresh_timeout = setTimeout(check_new_messages, 1000);
-)};
+});
 
 $(".hexagon").click(function() {
   $(this).find(".unchecked").toggleClass("no-display");
   $(this).find(".checked").toggleClass("no-display");
   var hexagonId =   $(this).attr("id");
   var checkboxName = "checkbox-"+hexagonId;
-  //alert(hexagonId);
   var checkBoxe = $("#"+checkboxName);
   checkBoxe.prop("checked", !checkBoxe.prop("checked"));
   var checked = checkBoxe.prop("checked");
