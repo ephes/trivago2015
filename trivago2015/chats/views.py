@@ -32,11 +32,12 @@ def get_messages(request, event_id):
 
     users = [x for x in User.objects.all()]
 
-    Message.objects.create(
-        event=event,
-        text=random.choice(comments),
-        author=random.choice(users)
-    )
+    if Message.objects.filter(event=event).count() < 3:
+        Message.objects.create(
+            event=event,
+            text=random.choice(comments),
+            author=random.choice(users)
+        )
 
     last = request.GET.get('last', None)
     if last and last != 'false':
