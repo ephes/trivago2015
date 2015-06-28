@@ -19,7 +19,7 @@ webapp_dir: "{{ user_dir }}/{{ project_name }}_webapp"
 #django_dir: "{{ webapp_dir }}/{{ project_name }}"
 django_dir: "{{ webapp_dir }}"
 virtualenv_dir: "{{ user_dir }}/.virtualenvs/{{ project_name }}"
-static_dir: "{{ django_dir }}/assets"
+static_dir: "{{ django_dir }}/staticfiles"
 
 
 server_name: j212975.servers.jiffybox.net
