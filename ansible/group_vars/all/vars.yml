@@ -22,7 +22,8 @@ virtualenv_dir: "{{ user_dir }}/.virtualenvs/{{ project_name }}"
 static_dir: "{{ django_dir }}/staticfiles"
 
 
-server_name: j212975.servers.jiffybox.net
+#server_name: j212975.servers.jiffybox.net
+server_name: www.metoo.link
 
 
 postgres_dumps_dir: /tmp/pgdumps
