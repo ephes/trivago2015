@@ -50,7 +50,7 @@ ul, li{
 }
 .people-image{
   width: 100%;
-  height: 400px;
+  height: 365px;
   overflow: hidden;
 }
 .people-image img{
@@ -229,7 +229,7 @@ height: 50px;
   top: 215px;
 }
 #btn-load-chat{
-  top: 160px;
+  top: 113px;
   left: 40%;
 }
 .back img, .forward img {
