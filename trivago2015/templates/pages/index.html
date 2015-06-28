@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MeeToo</title>
 
   <!-- Google Fonts Roboto-->
@@ -23,8 +24,8 @@
   <div data-role="page" id="page-welcome">
     <div role="main" class="ui-content">
       <div id="logo-container">
-        <img id="logo-upper" src="/static/images//icons/metoo1.png" />
-        <img id="logo-lower" src="/static/images//icons/metoo2.png" />
+        <img id="logo-upper" src="/static/images/icons/metoo1.png" />
+        <img id="logo-lower" src="/static/images/icons/metoo2.png" />
       </div>
       <div id="welcome-controls">
         <p><a href="#page-create" data-transition="slide" class="ui-btn ui-shadow ui-corner-all">Create</a></p>
@@ -42,11 +43,35 @@
   <div data-role="page" id="page-create" data-theme="a">
     <div data-role="header">
       <a href="#page-welcome" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
-      <h1>Create</h1>
+      <h1>Create a group activity</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-    </div><!-- /content -->
+      <form>
+        <input name="textinput-4" id="textinput-4" placeholder="Title" value="" type="text">
+        <fieldset data-role="controlgroup">
+          <legend class="ui-hidden-accessible">Horizontal controlgroup, radio:</legend>
+          <input name="radio-choice-h-4" id="radio-choice-h-4a" value="on" checked="checked" type="radio">
+          <label for="radio-choice-h-4a">Today, Sun 28th June</label>
+          <input name="radio-choice-h-4" id="radio-choice-h-4b" value="off" type="radio">
+          <label for="radio-choice-h-4b">Tomorrow, Mon 29th June</label>
+          <input name="radio-choice-h-4" id="radio-choice-h-4c" value="other" type="radio">
+          <label for="radio-choice-h-4c">Tue 30th June</label>
+        </fieldset>
+        <input name="textinput-4" id="textinput-4" placeholder="Place to meet" value="" type="text">
+        Hour to meet: <input name="slider-4" id="slider-4" value="10:00" min="1" max="24" data-highlight="true" data-mini="false" type="range">
+        <textarea cols="40" rows="8" name="textarea-4" id="textarea-4">Description</textarea>
+        <label for="select-multiple-4" class="ui-hidden-accessible">Categories:</label>
+        <select multiple="multiple" data-native-menu="false" name="select-multiple-4" id="select-multiple-4">
+          <option value="">Categories:</option>
+          <option value="sightseeing">Sightseeing</option>
+          <option value="drinks">Drinks</option>
+          <option value="food">Food</option>
+          <option value="sports">Sports</option>
+        </select>
+        <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-4">Submit</button>
+      </form>
+    </div><!-- /ui-content -->
   </div><!-- /page two -->
 
 
@@ -54,7 +79,6 @@
 
   <!-- Start of third page: #popup -->
   <div data-role="page" id="page-browse">
-
     <div data-role="header" data-theme="b">
       <a href="#page-welcome" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>Browse</h1>
@@ -73,26 +97,26 @@
         <input id="checkbox-culture_events" type="checkbox">
         <label for="checkbox-culture_events"><img class ="options-icon" src="/static/images/icons/culture.png"/>Culture Events</label>
         <input id="checkbox-concerts" type="checkbox">
-        <label for="checkbox-concerts"><img class ="options-icon" src="/static/images/icons/concert.png"/>Concerts</label>
+        <label for="checkbox-concerts"><img class ="options-icon" src="/static/images/icons/Concerts.png"/>Concerts</label>
         <input id="checkbox-dancing" type="checkbox">
         <label for="checkbox-dancing"><img class ="options-icon" src="/static/images/icons/dance.png"/>Dancing</label>
         <input id="checkbox-sports" type="checkbox">
         <label for="checkbox-sports"><img class ="options-icon" src="/static/images/icons/sport.png"/>Sports</label>
         <input id="checkbox-exploring" type="checkbox">
-        <label for="checkbox-exploring"><img class ="options-icon" src="/static/images/icons/explore.png"/>Exploring</label>
+        <label for="checkbox-exploring"><img class ="options-icon" src="/static/images/icons/Exploring.png"/>Exploring</label>
       </fieldset>
-      <a href="#" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right" id="btn-find-events">Find awesome People!</a>
+      <a href="#page-event-0" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right" id="btn-find-events">Find awesome People!</a>
     </div><!-- /content -->
   </div><!-- /page popup -->
 
-  <div data-role="page" id="people-1" data-theme="a">
+  <!--div data-role="page" id="people-1" data-theme="a">
 
     <div data-role="header">
-      <a href="#browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+      <a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>People who want to meet you</h1>
     </div><!-- /header -->
 
-    <div role="main" class="ui-content" style="padding:0;">
+    <!--div role="main" class="ui-content" style="padding:0;">
       <div class="people-image"><img src="/static/images/beer.jpg" />
       </div>
       <img class="back"  data-rel="back" data-order="1" src="/static/images/icons/back.png" />
@@ -111,15 +135,15 @@
       </div>
       <!-- /content -->
 
-  </div>
+  <!--/div-->
 
-  <div data-role="page" id="people-2" data-theme="a">
+  <!--div data-role="page" id="people-2" data-theme="a">
     <div data-role="header">
-      <a href="#browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+      <a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>People who want to meet you</h1>
     </div><!-- /header -->
 
-    <div role="main" class="ui-content" style="padding:0;">
+    <!--div role="main" class="ui-content" style="padding:0;">
       <div class="people-image"><img src="/static/images/party.jpg" />
       </div>
       <img class="back" data-rel="back" data-order="2" src="/static/images/icons/back.png" />
@@ -140,7 +164,7 @@
       </div>
     </div>
     <!-- /content -->
-  </div>
+  <!--/div-->
 
   <div data-role="page" id="page-map" data-theme="a">
 
@@ -156,24 +180,23 @@
         <img id="logo-lower" src="/static/images/icons/metoo2.png" />
     </div>
     -->
-    <div class="people-image"><img src="/static/images/party.jpg" /></div>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
     <center>
-      <div id="google-map" style="width:80%;"></div>
+      <div id="google-map" style="width:80%;min-height:400px;max-height:90%"></div>
     </center>
-    <script type="text/javascript">
+    <!--script type="text/javascript">
     var map;
     var service;
     var infowindow;
 
     function initialize() {
-      var bankok = new google.maps.LatLng(13.736717,100.523186);
+      var bankok = new google.maps.LatLng(14.236717,99.203186);
 
       map = new google.maps.Map(document.getElementById('google-map'), {
           center: bankok,
-          zoom: 15
+          zoom: 9
         });
 
       var request = {
@@ -184,6 +207,10 @@
 
       service = new google.maps.places.PlacesService(map);
       service.textSearch(request, callback);
+
+      var autocomplete = new google.maps.places.Autocomplete(input);
+      autocomplete.bindTo('bounds', map);
+
     }
 
     function createMarker(place) {
@@ -195,7 +222,7 @@
           path: 'M 0,-24 6,-7 24,-7 10,4 15,21 0,11 -15,21 -10,4 -24,-7 -6,-7 z',
           fillColor: '#ffff00',
           fillOpacity: 1,
-          scale: 2,
+          scale: 0.7,
           strokeColor: '#bd8d2c',
           strokeWeight: 1
         }
@@ -203,7 +230,7 @@
     }
 
     function callback(results, status) {
-    console.log(results)
+    console.log(results[0])
       if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
           var place = results[i];
@@ -212,9 +239,33 @@
       }
     }
     initialize();
-    </script>
+  </script-->
 
     </div><!-- /ui-content -->
+  </div>
+
+  <!-- Chat page -->
+  <div data-role="page" id="page-chat">
+    <div data-role="header" data-theme="b">
+      <a href="#page-browse" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+      <h1>Chat</h1>
+    </div><!-- /header -->
+    <div id="chat-content">
+      <div class="your-blob">
+        Hello Moon!
+      </div>
+
+      <div class="your-blob">
+        Hello Mars!
+      </div>
+      <div class="my-blob">
+        Hello World!
+      </div>
+    </div>
+    <div id="chat-input">
+      <input type="text" id="chat-input-form" placeholder="Type some lovely words..."/>
+      <button id="chat-submit">Go!</button>
+    </div>
   </div>
 
   <!-- jQuery -->

@@ -46,6 +46,10 @@ class EventCreateView(CreateView):
         response = super(EventCreateView, self).post(request, *args, **kwargs)
         return response
 
+    def dispatch(self, request, *args, **kwargs):
+        logger.info("dispatch post: {}".format(request.POST))
+        return super(EventCreateView, self).dispatch(request, *args, **kwargs)
+
 
 def fetch_events(request):
     """
@@ -57,6 +61,7 @@ def fetch_events(request):
         except:
             image_url = ''
         return {
+            'id': event.pk,
             'title': event.title,
             'description': event.description,
             'image': image_url,
@@ -83,11 +88,9 @@ def fetch_events(request):
             intersection = categories.intersection(e_categories)
             logger.info("intersection: {}".format(intersection))
             if len(intersection) > 0:
-                result.append({
-                    'title': event.title,
-                    'description': event.description,
-                })
+                result.append(event_to_dict(event))
     json_response = json.dumps(result)
+    logger.info("result: {}".format(result))
     return HttpResponse(json_response, content_type="application/json")
 
 

@@ -23,6 +23,7 @@ class RandomUserMiddleware(object):
             user = authenticate(username=username, password="travelBuddy")
             login(request, user)
             return HttpResponseRedirect(request.path)
+            request.user = user
 
 
 class DisableCSRF(object):
