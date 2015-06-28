@@ -82,7 +82,9 @@ $("#btn-find-events").click(function() {
             '<div class="people-image">' +
               '<img src="' + image + '" />' +
             '</div>' + previous_str +
-            '<img class="top" data-order="' + i + '" src="/static/images/icons/top.png" />' + next_str +
+            '<a href="#page-chat">' +
+              '<img class="top" src="/static/images/icons/top.png" />' + next_str +
+            '</a>' +
             '<div class="people-txt">' +
               '<p>' + description + '</p>' +
               '<p class="category-title">Categories:</p>' +
