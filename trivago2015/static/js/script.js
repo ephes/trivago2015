@@ -59,37 +59,36 @@ $("#btn-find-events").click(function() {
 
         var previous_str = '';
         if (i != 0) {
-          previous_str = `<a class="back" href="#page-event-` + (i - 1) + `">
-            <img src="/static/images/icons/back.png" />
-          </a>`
+          previous_str = '<a class="back" href="#page-event-' + (i - 1) + '">' +
+            '<img src="/static/images/icons/back.png" />' +
+          '</a>'
         }
 
         var next_str = '';
-        if (i != response.length) {
-          next_str = `<a class="forward" href="#page-event-` + (i + 1) + `">
-            <img src="/static/images/icons/forward.png" />
-          </a>`
+        if (i != (response.length - 1)) {
+          next_str = '<a class="forward" href="#page-event-' + (i + 1) + '">' +
+            '<img src="/static/images/icons/forward.png" />' +
+          '</a>'
         }
 
-        var eventMarkup = `<div data-role="page" id="page-event-` + i + `" data-theme="a" class="page-events">
-          <div data-role="header">
-            <a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
-            <h1>` + title + `</h1>
-          </div>
-          <!-- /header -->
+        var eventMarkup = '<div data-role="page" id="page-event-' + i + '" data-theme="a" class="page-events">' +
+          '<div data-role="header">' +
+            '<a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>' +
+            '<h1>' + title + '</h1>' +
+          '</div>' +
+          '<!-- /header -->' +
 
-          <div role="main" class="ui-content" style="padding:0;">
-            <div class="people-image">
-              <img src="` + image + `" />
-            </div>` + previous_str + `
-            <img class="top" data-order="` + i + `" src="/static/images/icons/top.png" />
-            ` + next_str + `
-            <div class="people-txt">
-              <p>` + description + `</p>
-              <p class="category-title">Categories:</p>
-              <ul class="categories">` + categories_str + `</ul>
-            </div>
-          </div></div>`;
+          '<div role="main" class="ui-content" style="padding:0;">' +
+            '<div class="people-image">' +
+              '<img src="' + image + '" />' +
+            '</div>' + previous_str +
+            '<img class="top" data-order="' + i + '" src="/static/images/icons/top.png" />' + next_str +
+            '<div class="people-txt">' +
+              '<p>' + description + '</p>' +
+              '<p class="category-title">Categories:</p>' +
+              '<ul class="categories">' + categories_str + '</ul>' +
+            '</div>' +
+          '</div></div>';
         $("body").append(eventMarkup);
       }
 
