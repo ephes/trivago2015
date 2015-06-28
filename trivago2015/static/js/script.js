@@ -84,5 +84,10 @@ $("#btn-find-events").click(function() {
 $(".hexagon").click(function(){
   $(this).find(".unchecked").toggleClass("no-display");
   $(this).find(".checked").toggleClass("no-display");
-   $("#checkbox-drink").prop("checked", !checkBoxes.prop("checked"));
+  var hexagonId =   $(this).attr("id");
+  var checkboxName = "checkbox-"+hexagonId;
+  alert(hexagonId);
+  var checkBoxe = $("#"+checkboxName);
+  checkBoxe.prop("checked", !checkBoxe.prop("checked"));
+  var checked = checkBoxe.prop("checked");
 });
