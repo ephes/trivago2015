@@ -39,14 +39,14 @@ var handle_events_data = function(data) {
 
     var previous_str = '';
     if (i != 0) {
-      previous_str = '<a class="back" href="#page-event-' + (i - 1) + '">' +
+      previous_str = '<a class="back" href="#page-event-' + (i - 1) + '" data-transition="slide" data-rel="back">' +
         '<img src="/static/images/icons/back.png" />' +
       '</a>'
     }
 
     var next_str = '';
     if (i != (response.length - 1)) {
-      next_str = '<a class="forward" href="#page-event-' + (i + 1) + '">' +
+      next_str = '<a class="forward" href="#page-event-' + (i + 1) + '" data-transition="slide">' +
         '<img src="/static/images/icons/forward.png" />' +
       '</a>'
     }
