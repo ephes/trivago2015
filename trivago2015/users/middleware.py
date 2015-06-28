@@ -20,19 +20,10 @@ class RandomUserMiddleware(object):
                 last_name=full_name.split(' ')[1],
                 password="travelBuddy"
             )
-<<<<<<< Updated upstream
             user = authenticate(username=username, password="travelBuddy")
             login(request, user)
             return HttpResponseRedirect(request.path)
-=======
             request.user = user
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 
 class DisableCSRF(object):
