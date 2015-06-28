@@ -88,6 +88,7 @@ def fetch_events(request):
                     'description': event.description,
                 })
     json_response = json.dumps(result)
+    logger.info("result: {}".format(result))
     return HttpResponse(json_response, content_type="application/json")
 
 
