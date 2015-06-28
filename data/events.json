@@ -36,7 +36,7 @@
 			"title": "Bike sightseeing tour",
 			"category": [ 
 				"Sightseeing",
-				"Sport",
+				"Sports",
 				"Exploring"
 			],
 			"location":[
@@ -256,7 +256,9 @@
 		{
 			"title": "A night in Zuma",
 			"category": [
-				"Drink"
+				"Drink",
+				"Party",
+				"Dancing"
 			],
 			"location":[
 				"Bangkok",
@@ -286,7 +288,7 @@
 		{
 			"title": "Hike in Erawan Nationalpark",
 			"category": [
-				"Sport",
+				"Sports",
 				"Exploring"
 			],
 			"location":[
