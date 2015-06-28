@@ -58,3 +58,8 @@ $("#btn-find-events").click(function() {
     }
   })
 });
+$(".hexagon").click(function(){
+  $(this).find(".unchecked").toggleClass("no-display");
+  $(this).find(".checked").toggleClass("no-display");
+   $("#checkbox-drink").prop("checked", !checkBoxes.prop("checked"));
+});

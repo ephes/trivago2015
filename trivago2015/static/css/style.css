@@ -167,3 +167,18 @@ height: 50px;
 .ui-icon-back{
   height: 30px;
 }*/
+#checkboxes{
+  display: none;
+}
+.hexagon{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.hexagon img{
+  position: absolute;
+  top:0;
+}
+.no-display{
+  display: none;
+}
