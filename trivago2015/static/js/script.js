@@ -82,6 +82,7 @@ $("#btn-find-events").click(function() {
   });
   $.ajax("/events/fetch/", {
     "dataType": "json",
+    "method": "POST",
     "data": JSON.stringify({
       "preferences": prefs
     }),
