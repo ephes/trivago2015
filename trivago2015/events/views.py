@@ -46,6 +46,10 @@ class EventCreateView(CreateView):
         response = super(EventCreateView, self).post(request, *args, **kwargs)
         return response
 
+    def dispatch(self, request, *args, **kwargs):
+        logger.info("dispatch post: {}".format(request.POST))
+        return super(EventCreateView, self).dispatch(request, *args, **kwargs)
+
 
 def fetch_events(request):
     """

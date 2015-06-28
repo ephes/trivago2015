@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- jQuery -->
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+		<!-- jQuery Mobile -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+		<link rel="stylesheet" href="/static/css/style.css">
+	</head>
+	<body>
+		<!-- Start of third page: #popup -->
+		<div data-role="page" id="page-browse">
+
+			<div data-role="header" data-theme="b">
+				<a href="#welcome" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+				<h1>Browse</h1>
+			</div><!-- /header -->
+
+			<div role="main" class="ui-content">
+<div id="pref-container">
+			<div id="column-1" class="column">		<div id="drink" class="hexagon">
+					<img class="unchecked" src="/static/images/icons/drink.png" />
+					<img class="checked no-display" src="/static/images/icons/drink-a.png" />
+					</div>
+					<div id="concert" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/concert.png" />
+						<img class="checked no-display" src="/static/images/icons/concert-a.png" />
+					</div>
+					<div id="explore" class="hexagon">
+					<img class="unchecked" src="/static/images/icons/explore.png" />
+					<img class="checked no-display" src="/static/images/icons/explore-a.png" /></div>
+				</div>
+				<div id="column-2" class="column">
+					<div id="food" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/food.png" />
+						<img class="checked no-display" src="/static/images/icons/food-a.png" /></div>
+					<div id="sightseeing" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/sightseeing.png" />
+						<img class="checked no-display" src="/static/images/icons/sightseeing-a.png" /></div>
+					<div id="sport" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/sport.png" />
+						<img class="checked no-display" src="/static/images/icons/sport-a.png" /></div>
+					</div>
+					<div id="column-3" class="column">
+					<div id="party" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/party.png" />
+						<img class="checked no-display" src="/static/images/icons/party-a.png" /></div>
+					<div id="culture" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/culture.png" />
+						<img class="checked no-display" src="/static/images/icons/culture-a.png" /></div>
+					<div id="dance" class="hexagon">
+						<img class="unchecked" src="/static/images/icons/dance.png" />
+						<img class="checked no-display" src="/static/images/icons/dance-a.png" /></div>
+					</div>
+			</div>
+				</div>
+				<fieldset data-role="controlgroup" id="checkboxes">
+	        <input id="checkbox-food" type="checkbox">
+	        <label for="checkbox-food"><img class ="options-icon" src="/static/images/icons/food.png"/>Food</label>
+	        <input id="checkbox-drink" type="checkbox">
+	        <label for="checkbox-drink"><img class ="options-icon" src="/static/images/icons/drink.png"/>Drink</label>
+	        <input id="checkbox-party" type="checkbox">
+	        <label for="checkbox-party"><img class ="options-icon" src="/static/images/icons/party.png"/>Party</label>
+	        <input id="checkbox-sightseeing" type="checkbox">
+	        <label for="checkbox-sightseeing"><img class ="options-icon" src="/static/images/icons/sightseeing.png"/>Sightseeing</label>
+	        <input id="checkbox-culture_events" type="checkbox">
+	        <label for="checkbox-culture_events"><img class ="options-icon" src="/static/images/icons/culture.png"/>Culture Events</label>
+	        <input id="checkbox-concerts" type="checkbox">
+	        <label for="checkbox-concerts"><img class ="options-icon" src="/static/images/icons/Concert.png"/>Concerts</label>
+	        <input id="checkbox-dancing" type="checkbox">
+	        <label for="checkbox-dancing"><img class ="options-icon" src="/static/images/icons/dance.png"/>Dancing</label>
+	        <input id="checkbox-sports" type="checkbox">
+	        <label for="checkbox-sports"><img class ="options-icon" src="/static/images/icons/sport.png"/>Sports</label>
+	        <input id="checkbox-exploring" type="checkbox">
+	        <label for="checkbox-exploring"><img class ="options-icon" src="/static/images/icons/Explore.png"/>Exploring</label>
+	      </fieldset>
+<a href="#people-1" id="find-submit" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">Find awesome People!</a>
+					</div><!-- /content -->
+		</div><!-- /page popup -->
+		<script src="/static/js/script.js"></script>
+	</body>
+</html>
