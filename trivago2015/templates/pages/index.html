@@ -42,11 +42,36 @@
   <div data-role="page" id="page-create" data-theme="a">
     <div data-role="header">
       <a href="#page-welcome" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
-      <h1>Create</h1>
+      <h1>Create a group activity</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-    </div><!-- /content -->
+
+        <form>
+            <input name="textinput-4" id="textinput-4" placeholder="Title" value="" type="text">
+            <fieldset data-role="controlgroup">
+                <legend class="ui-hidden-accessible">Horizontal controlgroup, radio:</legend>
+                <input name="radio-choice-h-4" id="radio-choice-h-4a" value="on" checked="checked" type="radio">
+                <label for="radio-choice-h-4a">Today, Sun 28th June</label>
+                <input name="radio-choice-h-4" id="radio-choice-h-4b" value="off" type="radio">
+                <label for="radio-choice-h-4b">Tomorrow, Mon 29th June</label>
+                <input name="radio-choice-h-4" id="radio-choice-h-4c" value="other" type="radio">
+                <label for="radio-choice-h-4c">Tue 30th June</label>
+            </fieldset>
+            <input name="textinput-4" id="textinput-4" placeholder="Place to meet" value="" type="text">
+            Hour to meet: <input name="slider-4" id="slider-4" value="10:00" min="1" max="24" data-highlight="true" data-mini="false" type="range">
+            <textarea cols="40" rows="8" name="textarea-4" id="textarea-4">Description</textarea>
+            <label for="select-multiple-4" class="ui-hidden-accessible">Categories:</label>
+            <select multiple="multiple" data-native-menu="false" name="select-multiple-4" id="select-multiple-4">
+                <option value="">Categories:</option>
+                <option value="sightseeing">Sightseeing</option>
+                <option value="drinks">Drinks</option>
+                <option value="food">Food</option>
+                <option value="sports">Sports</option>
+            </select>
+            <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-4">Submit</button>
+        </form>
+    </div><!-- /ui-content -->
   </div><!-- /page two -->
 
 
@@ -88,7 +113,7 @@
   <div data-role="page" id="people-1" data-theme="a">
 
     <div data-role="header">
-      <a href="#browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+      <a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>People who want to meet you</h1>
     </div><!-- /header -->
 
@@ -115,7 +140,7 @@
 
   <div data-role="page" id="people-2" data-theme="a">
     <div data-role="header">
-      <a href="#browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
+      <a href="#page-browse" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"></a>
       <h1>People who want to meet you</h1>
     </div><!-- /header -->
 
