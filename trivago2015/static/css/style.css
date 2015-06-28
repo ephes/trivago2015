@@ -113,6 +113,7 @@ height: 50px;
   right: 0;
   height: 50px;
   width: 15%;
+  font-size: 12px;
 }
 #logo-container{
   width: 24%;
@@ -200,7 +201,7 @@ height: 50px;
   position: absolute;
   width: 100%;
   margin: 0 auto 0 auto;
-  top: 95px;
+  top: 70px;
 }
 .column{
   clear: both;
@@ -217,7 +218,7 @@ height: 50px;
  }
 #btn-find-events{
   position: absolute;
-  bottom: 55px;
+  bottom: 10px;
   width: 80%;
   margin-right: 0;
 }
