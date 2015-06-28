@@ -3,13 +3,10 @@ import logging
 
 from django.shortcuts import render
 from django.http import HttpResponse
-<<<<<<< Updated upstream
 from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import get_user_model
 from django.core.urlresolvers import reverse
-=======
->>>>>>> Stashed changes
 from django.views.decorators.csrf import csrf_exempt
 
 from django.views.generic import FormView
@@ -34,7 +31,6 @@ class EventCreateView(CreateView):
     form_invalid_message = "Event create form invalid"
     form_valid_message = "Event successfully created!"
 
-<<<<<<< Updated upstream
     def get_success_url(self):
         return reverse('events:create_event')
 
@@ -45,8 +41,6 @@ class EventCreateView(CreateView):
         return HttpResponseRedirect(self.get_success_url())
 
     @csrf_exempt
-=======
->>>>>>> Stashed changes
     def post(self, request, *args, **kwargs):
         logger.info("event create post: {}".format(request.POST))
         response = super(EventCreateView, self).post(request, *args, **kwargs)
