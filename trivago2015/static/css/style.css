@@ -218,9 +218,10 @@ height: 50px;
 #column-1, #column-2{
   margin-right: -24px;
  }
-#find-submit{
+#btn-find-events{
   position: absolute;
   bottom: 25px;
+  left: 10%;
   width: 80%;
   margin: 0 auto 0 auto;
 }
