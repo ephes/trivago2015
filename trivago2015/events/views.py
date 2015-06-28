@@ -83,10 +83,7 @@ def fetch_events(request):
             intersection = categories.intersection(e_categories)
             logger.info("intersection: {}".format(intersection))
             if len(intersection) > 0:
-                result.append({
-                    'title': event.title,
-                    'description': event.description,
-                })
+                result.append(event_to_dict(event))
     json_response = json.dumps(result)
     logger.info("result: {}".format(result))
     return HttpResponse(json_response, content_type="application/json")
