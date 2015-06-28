@@ -1,5 +1,6 @@
 import os
 import json
+from datetime import datetime
 
 from pprint import pprint
 
@@ -29,8 +30,18 @@ class Command(BaseCommand):
             event = Event()
             event.title = ed.get('title')
             event.description = ed.get('description')
-            event.owner = users[ed['username']]
+            event.location = ed.get('location', [])[1]
+            print(event.location)
+            event.start = datetime.strptime(ed.get('start'), '%d.%m.%Y %H:%M')
+            event.ende = ed.get('ende')
+            if event.ende:
+                event.ende = datetime.strptime(ed.get('ende'), '%d.%m.%Y %H:%M')      
+                print(event.ende)
+                
             event.categories = ','.join(ed.get('category', []))
+            print(event.categories)
+            event.owner = users[ed['username']]
+            
             print('event owner: {}'.format(event.owner))
             event.save()
             try:
