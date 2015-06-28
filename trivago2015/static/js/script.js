@@ -1,8 +1,23 @@
-$("#chat-submit").click(function(){
+var chat_refresh_timeout = false;
+
+var handle_message_send_response = function(data) {
   var textValue = $("#chat-input-form").val();
-  var bubbleMarkup = "<div class='my-blob'>" + textValue + "</div>";
+  var bubbleMarkup = '<div class="blob my-blob" data-created="' + data.created_at + '">' + textValue + '</div>';
   $("#chat-content").append(bubbleMarkup);
-  $("#chat-input-form").val("");
+  $("#chat-input-form").val('');
+}
+
+$("#chat-submit").click(function() {
+  var eventid = $('#page-chat #input-event-id').val();
+  var textValue = $("#chat-input-form").val();
+  $.ajax('/chats/post/' + eventid + '/', {
+    'method': 'POST',
+    'data': JSON.stringify({
+      'text': textValue
+    }),
+    'processData': false,
+    'success': handle_message_send_response
+  });
 });
 
 var handle_events_data = function(data) {
@@ -84,4 +99,29 @@ $("#btn-find-events").click(function() {
     "processData": false,
     "success": handle_events_data
   })
+});
+
+
+var handle_chat_data = function(data) {
+  chats = data.results;
+  for (var i = 0; i < chats.length; i++) {
+    var chat = chats[i];
+    $("#chat-content").append('<div class="blob your-blob" data-created="' + chat.created_at + '">' + chat.text + '</div>');
+  }
+}
+
+
+var check_new_messages = function() {
+  var eventid = $('#page-chat #input-event-id').val();
+  var last = $('#chat-content .blob').last().data('created') || false;
+  $.ajax('/chats/messages/' + eventid + '/?last=' + last, {
+    'method': 'GET',
+    'success': handle_chat_data,
+    'dataType': 'JSON'
+  });
+  chat_refresh_timeout = setTimeout(check_new_messages, 3000);
+}
+
+$('#page-chat').on('pagebeforeshow', function(event) {
+  chat_refresh_timeout = setTimeout(check_new_messages, 1000);
 });
